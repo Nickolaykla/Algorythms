@@ -5,10 +5,11 @@ import java.util.Arrays;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] array = {3, 2, 4, 5, 8, 9, 1, 0, 7, 6, 10};
-        System.out.println(Arrays.toString(bubbleSort(array)));
+        bubbleSort(array);
+        System.out.println(Arrays.toString(array));
     }
 
-    public static int[] bubbleSort(int[] arr) {
+    public static void bubbleSort(int[] arr) {
         boolean nextIteration = true;
 
         while (nextIteration) {
@@ -23,6 +24,5 @@ public class BubbleSort {
                 }
             }
         }
-        return arr;
     }
 }

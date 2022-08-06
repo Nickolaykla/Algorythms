@@ -5,9 +5,10 @@ import java.util.Arrays;
 public class SelectionSort {
     public static void main(String[] args) {
         int[] array = {3, 2, 4, 5, 8, 9, 1, 0, 7, 6, 10};
-        System.out.println(Arrays.toString(selectionSort(array)));
+        selectionSort(array);
+        System.out.println(Arrays.toString(array));
     }
-    public static int[] selectionSort(int[] arr) {
+    public static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int min = i;
             for (int j = i + 1; j < arr.length; j++) {
@@ -19,6 +20,5 @@ public class SelectionSort {
             arr[i] = arr[min];
             arr[min] = tmp;
         }
-        return arr;
     }
 }
