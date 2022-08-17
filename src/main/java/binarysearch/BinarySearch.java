@@ -7,11 +7,11 @@ public class BinarySearch {
         int[] arr = {3, 1, 4, 2, 5};
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
-        System.out.println(binarySearch(arr, 5));
+        System.out.println(binarySearch(arr, 6));
     }
     public static int binarySearch(int[] arr, int target) {
         int start = 0;
-        int end = arr.length;
+        int end = arr.length - 1;
 
         while (start <= end) {
 
@@ -21,9 +21,9 @@ public class BinarySearch {
                 return mid;
             }
             if (target < arr[mid]) {
-                end = mid;
+                end = mid - 1;
             } else  {
-                start = mid;
+                start = mid + 1;
             }
         }
         return -1;
